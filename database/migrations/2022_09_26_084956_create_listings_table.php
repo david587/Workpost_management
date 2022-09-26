@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string("company");
             $table->string("email");
             $table->string("website");
+            $table->string("location");
             $table->longText("description");
             $table->timestamps();
         });

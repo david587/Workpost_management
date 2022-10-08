@@ -43,11 +43,15 @@ class ListingController extends Controller
             "tags"=>"required",
             "description"=>"required"
         ]);
-
+        // there was an image uploaded
+        if($request->hasFile("file")){
+        //we want to add to the formfields, set the path and uploadign at the same time,
+        //i want to have logos named folder in the nameapp storage public
+        $formFields["logo"] = $request->file("file")->store("logos","public");
+    }
         Listing::create($formFields);
 
-    if($request->hasFile("logo")){
-    }
+
 
         //Flash message
         return redirect("/")->with("message","Listing created succesfully!");

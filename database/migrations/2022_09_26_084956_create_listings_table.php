@@ -16,6 +16,8 @@ return new class extends Migration
         //create a listigns table
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
+            //foregin key adedd,if user deleted also delete the user posts
+            $table->foreignId("user_id")->constrained()->onDelete("cascade");
             $table->string("title");
             $table->string("logo")->nullable(); //if it doestnt have an image its fine
             $table->string("tags");

@@ -58,7 +58,7 @@ class UserController extends Controller
             "email"=>["required","email"],
             "password"=>"required"
         ]);
-
+        
         //attemt to log the user in, 
         //if thats true we regenerate the session id
         if(auth()->attempt($formfields)){

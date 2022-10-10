@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use auth;
+
 use App\Models\Listing;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use Faker\Provider\ar_EG\Company;
-use Illuminate\Contracts\Session\Session;
+
 
 class ListingController extends Controller
 {
@@ -49,6 +51,9 @@ class ListingController extends Controller
         //i want to have logos named folder in the nameapp storage public
         $formFields["logo"] = $request->file("file")->store("logos","public");
     }
+        //adds id to user_id field
+        $formFields["user_id"]=auth()->id();
+
         Listing::create($formFields);
 
 
@@ -87,5 +92,10 @@ class ListingController extends Controller
     public function destroy(Listing $listing){
         $listing->delete();
         return redirect("/")->with("message","Lisintg deleted succesfully");
+    }
+
+    //Manage Listings
+    public function manage(){
+        return view("listings.manage",['listings'=>auth()->user()->listings()->get()]);
     }
 }

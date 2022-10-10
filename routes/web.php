@@ -45,6 +45,9 @@ Route::put("/listings/{listing}",[ListingController::class, "update"])->middlewa
 //Delete Listing
 Route::delete("/listings/{listing}",[ListingController::class, "destroy"])->middleware("auth");;
 
+//Manage Listings
+Route::get("/listings/manage",[ListingController::class,"manage"])->middleware("auth");
+
 //Single Listing
 Route::get("/listings/{listing}",[ListingController::class,"show"]);
 
@@ -62,3 +65,4 @@ Route::get("/login",[UserController::class, "login"])->name("login")->middleware
 
 //Log in user
 Route::post("/users/authenticate",[UserController::class,"authenticate"]);
+

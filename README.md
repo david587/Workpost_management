@@ -8,7 +8,9 @@
 </p>
 
 ![tic-tac-toe-5](https://user-images.githubusercontent.com/61178364/197281349-ab889f83-3460-4223-ad7d-1ac3b6d5cacc.png)
-Fullstack Web Application
+Fullstack Web Application, With authentication, users can post Jobs, only the user will see his own post.
+Login required to post.
+As guest u can see and visit the posts what are not made by users.
 
 ## About Laravel
 

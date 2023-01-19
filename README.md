@@ -1,3 +1,6 @@
+This is a full-stack Laravel web application that enables users to post jobs with the help of authentication. Only the user will be able to see their own posts.
+Login is required to post a job. As a guest, you can view and visit posts that are not created by users. The application has full CRUD functionality.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -8,9 +11,7 @@
 </p>
 
 ![tic-tac-toe-5](https://user-images.githubusercontent.com/61178364/197281349-ab889f83-3460-4223-ad7d-1ac3b6d5cacc.png)
-Fullstack Web Application, With authentication, users can post Jobs, only the user will see his own post.
-Login required to post.
-As guest u can see and visit the posts what are not made by users.
+
 
 ## About Laravel
 
